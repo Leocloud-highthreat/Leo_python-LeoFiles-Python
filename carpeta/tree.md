@@ -27,4 +27,29 @@ elif height < 130 and credits > 2:
 else:
   print(respuestas[3])
 ```
+## Mejoras posteriores.
+```python
+# Entrada de datos
+try:
+    height  = int(input("Introduzca su altura en cm: "))
+    credits = int(input("Introduzca sus créditos: "))
+except ValueError:
+    print("Error: introduzca solo números enteros.")
+    exit()
+
+# Mensajes de respuesta
+respuestas = {
+    "ok":          "Enjoy the ride!",
+    "low_height":  "You are not tall enough to ride.",
+    "low_credits": "You don't have enough credits.",
+}
+
+# Árbol de decisiones
+if height < 130:
+    print(respuestas["low_height"])
+elif credits < 2:
+    print(respuestas["low_credits"])
+else:
+    print(respuestas["ok"])
+```
   
